@@ -14,6 +14,7 @@ RUN rm /dev/random && ln -s /dev/urandom /dev/random \
 
 ADD tomcat-users.xml.tpl ${CATALINA_HOME}/conf/tomcat-users.xml.tpl
 ADD manager.xml ${CATALINA_HOME}/conf/Catalina/localhost/manager.xml
+ADD host-manager.xml ${CATALINA_HOME}/conf/Catalina/localhost/host-manager.xml
 ADD server.xml ${CATALINA_HOME}/conf/server.xml
 
 EXPOSE 8080
