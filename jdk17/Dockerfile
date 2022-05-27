@@ -1,7 +1,7 @@
 FROM tomcat:8-jdk17
 LABEL maintainer "Johannes Wettinger <jowettinger@gmail.com>, Michael Wurster <miwurster@gmail.com>"
 
-ARG DOCKERIZE_VERSION=v0.3.0
+ARG DOCKERIZE_VERSION=v0.6.1
 
 ENV TOMCAT_USERNAME admin
 ENV TOMCAT_PASSWORD admin
