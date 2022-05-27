@@ -31,6 +31,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./jdk8
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: opentosca/engine-ia:latest-jdk8
       - name: Build and push latest engine-ia JDK 17
@@ -38,5 +39,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./jdk17
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: opentosca/engine-ia:latest-jdk17
