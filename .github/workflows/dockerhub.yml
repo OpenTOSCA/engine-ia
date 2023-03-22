@@ -30,6 +30,10 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,pattern={{version}}
+            type=sha
 
       - name: Login to Container registry
         if: github.event_name != 'pull_request'
